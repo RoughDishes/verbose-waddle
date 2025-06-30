@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trade4US</title>
+    <link rel="stylesheet" href="BillieStylish.css">
+    <link href="https://fonts.googleapis.com/css2?family=Yrsa:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+    <script src="admortum.js"></script>
+</head>
+<body>
+    <div class="gooeyElements">
+        <img id="Logo" src="TRADE4US_1.png" alt="Trade4US Logo">
+        <h1 id="titlecard">Trade4US</h1>
+        <textarea></textarea> <button type="button" id="login">
+            <img id="loginIcon" src="loginavatar.png" alt="Login" />
+            <span>Login</span>
+        </button>
+
+        </div>
+
+    <div class="Itemware">
+        <img id="Wine" src="EXwine.png">
+        <img id="Sunglasses" src="Sunglasses.png">
+        <img id="Water" src="Waterglass.png">
+        <img id="Phone" src="ifon.png">
+    </div>
+
+    <p id="fokkinparagraaf">Welcome to Trade4US! Please log in or register.</p>
+
+    <div id="chatListDropdown" class="chat-list-dropdown">
+    <div class="chat-list-header">
+        <h4>Your Conversations</h4>
+        <span class="closeChatListDropdownBtn">&times;</span>
+    </div>
+    <div id="chatListContent" class="chat-list-content">
+        <p class="no-chats-message" style="display: none;">You have no active conversations yet.</p>
+    </div>
+    </div>
+
+
+
+    <div id="authModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+
+            <div id="loginSection" class="auth-section active">
+                <h2>Login</h2>
+                <form action="Login.php" method="POST">
+                    <label for="username">Username:</label><br>
+                    <input type="text" id="username" name="username" required><br><br>
+
+                    <label for="password">Password:</label><br>
+                    <input type="password" id="password" name="password" required><br><br>
+
+                    <button type="submit">Login</button>
+                </form>
+                <p style="text-align: center; margin-top: 15px;">Don't have an account? <a href="#" id="switchToRegister" class="modal-link">Register here</a></p>
+            </div>
+
+            <div id="registerSection" class="auth-section">
+                <h2>Register</h2>
+                <form action="Register.php" method="POST">
+                    <label for="regFirstName"><u>First Name</u>:</label><br>
+                    <input type="text" id="regFirstName" name="firstname" required>
+
+                    <label for="regLastName"><u>Last Name</u>:</label><br>
+                    <input type="text" id="regLastName" name="lastname" required>
+
+                    <label for="regUsername"><u>Username</u>:</label><br>
+                    <input type="text" id="regUsername" name="username" required>
+
+                    <label for="regEmail"><u>Email</u>:</label><br>
+                    <input type="email" id="regEmail" name="email" required>
+
+                    <label for="regPassword"><u>Password</u>:</label><br>
+                    <input type="password" id="regPassword" name="password" required>
+
+                    <label for="confirmRegPassword"><u>Confirm Password</u>:</label><br>
+                    <input type="password" id="confirmRegPassword" name="confirm_password" required>
+                    
+                    <button type="submit">Register</button>
+                </form>
+                <p style="text-align: center; margin-top: 15px;">Already have an account? <a href="#" id="switchToLogin" class="modal-link">Login here</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

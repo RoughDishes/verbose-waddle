@@ -1,0 +1,541 @@
+body {
+    margin: 0;
+    font-family: 'Yrsa', serif;
+    background-color: #323437;
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.gooeyElements {
+    background-color: #121111;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #c8ed72;
+    border-bottom: 1px solid #c8ed72;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+.gooeyElements .left-section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-grow: 1;
+    justify-content: flex-start;
+    min-width: 350px;
+}
+
+.gooeyElements #Logo {
+    max-height: 60px;
+    width: auto;
+}
+
+.gooeyElements #titlecard {
+    font-size: 2em;
+    color: #c8ed72;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+}
+
+.gooeyElements textarea {
+    flex-grow: 1;
+    min-width: 150px;
+    max-width: 300px;
+    height: 35px;
+    border: 1px solid #c8ed72;
+    background-color: #2a2a2a;
+    color: #c8ed72;
+    border-radius: 5px;
+    padding: 10px 12px;
+    font-family: 'Yrsa', serif;
+    resize: none;
+    box-sizing: border-box;
+    font-size: 1em;
+}
+.gooeyElements textarea::placeholder {
+    color: #999;
+}
+
+.gooeyElements .nav-buttons {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    gap: 15px;
+    margin-left: auto;
+}
+
+.header-profile-container {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid #c8ed72;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+.header-profile-container:hover {
+    transform: scale(1.05);
+}
+
+.header-profile-pic {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+.gooeyElements button,
+.gooeyElements a button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: #c8ed72;
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    white-space: nowrap;
+    font-size: 1em;
+}
+
+.gooeyElements button:hover,
+.gooeyElements a button:hover {
+    background-color: #2a2a2a;
+    color: #aae052;
+}
+
+.gooeyElements button img {
+    height: 28px;
+    width: 28px;
+    margin-right: 8px;
+}
+
+.gooeyElements button span {
+    font-weight: normal;
+    margin-right: 0;
+}
+
+.main-content-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    gap: 30px;
+    flex-grow: 1;
+    align-items: flex-start;
+}
+
+.profile-upload-section {
+    background-color: #1a1a1a;
+    border: 1px solid #c8ed72;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    text-align: center;
+    max-width: 350px;
+    width: 90%;
+    box-sizing: border-box;
+    position: relative;
+}
+
+
+.profile-upload-section h2 {
+    color: #c8ed72;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.profile-pic-container {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 20px auto;
+    border: 3px solid #c8ed72;
+    background-color: #333;
+}
+
+.profile-pic-container .large-profile-pic {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-upload-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.custom-file-upload {
+    display: inline-block;
+    padding: 10px 15px;
+    cursor: pointer;
+    background-color: #2a2a2a;
+    color: #c8ed72;
+    border: 1px solid #c8ed72;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-size: 0.9em;
+    text-align: center;
+    width: calc(100% - 2px);
+    box-sizing: border-box;
+}
+
+.custom-file-upload:hover {
+    background-color: #3a3a3a;
+}
+
+#profilePicUpload {
+    display: none;
+}
+
+.profile-upload-section .upload-btn {
+    background-color: #c8ed72;
+    color: #121111;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.profile-upload-section .upload-btn:hover {
+    background-color: #aae052;
+}
+
+.profile-welcome {
+    margin-top: 25px;
+    font-size: 1.1em;
+    color: #fff;
+}
+
+
+.Itemware {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    gap: 20px;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    align-content: flex-start;
+    max-width: calc(100% - 40px);
+}
+
+@media (min-width: 900px) {
+    .Itemware {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 900px) {
+    .main-content-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+    .profile-upload-section {
+        width: 90%;
+    }
+    .Itemware {
+        max-width: 100%;
+    }
+}
+
+
+.product-card {
+    background-color: #1a1a1a;
+    border: 1px solid #c8ed72;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    width: 220px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    background-color: #000;
+    border-bottom: 1px solid #c8ed72;
+}
+
+.product-details {
+    padding: 15px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.product-name {
+    font-size: 1.2em;
+    color: #c8ed72;
+    margin-top: 0;
+    margin-bottom: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.product-price {
+    font-size: 1.1em;
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.product-description {
+    font-size: 0.9em;
+    color: #bbb;
+    margin-bottom: 15px;
+    height: 40px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.4;
+}
+
+.seller-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: auto;
+    padding-top: 10px;
+    border-top: 1px solid #2a2a2a;
+}
+
+.seller-profile-pic {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 8px;
+    border: 1px solid #c8ed72;
+    background-color: #555;
+}
+.profile-pic-container .seller-profile-pic.large-profile-pic {
+    width: 100%;
+    height: 100%;
+}
+
+
+.seller-name {
+    font-size: 0.85em;
+    color: #eee;
+}
+
+.no-products-message {
+    color: #bbb;
+    text-align: center;
+    font-size: 1.2em;
+    margin-top: 50px;
+    width: 100%;
+}
+
+.modal {
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: none;
+}
+
+
+.modal-content {
+    background-color: #121111;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    border-color: #c8ed72;
+    border-style: outset;
+    font-family: 'Yrsa', serif;
+    color: #c8ed72;
+    position: relative;
+    margin: 10% auto;
+    max-width: 400px;
+    width: 90%;
+    box-sizing: border-box;
+    overflow-y:auto;
+}
+
+.close, .closeProfilePicModalBtn, .closeUploadProductModalBtn {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    background: transparent;
+    line-height: 1;
+    padding: 0;
+}
+
+.close:hover,
+.close:focus,
+.closeProfilePicModalBtn:hover,
+.closeProfilePicModalBtn:focus,
+.closeUploadProductModalBtn:hover,
+.closeUploadProductModalBtn:focus {
+    color: #c8ed72;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.auth-section {
+    display: none;
+    padding-top: 25px;
+}
+.auth-section.active {
+    display: block;
+}
+.modal-link {
+    color: #c8ed72;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.modal-link:hover {
+    color: #aae052;
+}
+.modal-content form label {
+    margin-top: 10px;
+    display: block;
+    text-align: left;
+}
+.modal-content form input[type="text"],
+.modal-content form input[type="password"],
+.modal-content form input[type="email"],
+.modal-content form input[type="number"],
+.modal-content form textarea {
+    width: calc(100% - 20px);
+    padding: 8px 10px;
+    margin-bottom: 10px;
+    border: 1px solid #c8ed72;
+    background-color: #2a2a2a;
+    color: #c8ed72;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.modal-content button[type="submit"] {
+    background-color: #c8ed72;
+    color: #121111;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+}
+.modal-content button[type="submit"]:hover {
+    background-color: #aae052;
+}
+
+.flash-message {
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-family: 'Yrsa', serif;
+    text-align: center;
+    max-width: 500px;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 10px;
+    z-index: 999;
+    white-space: nowrap;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+.flash-message.success {
+    background-color: #c8ed72;
+    color: #121111;
+    border: 1px solid #aae052;
+}
+.flash-message.error {
+    background-color: #ffcccc;
+    color: #cc0000;
+    border: 1px solid #ff0000;
+}
+.flash-message.info {
+    background-color: #e0f2f7;
+    color: #31708f;
+    border: 1px solid #bce8f1;
+}
+
+#uploadProductModal .modal-content h2 {
+    text-align: center;
+    color: #c8ed72;
+    margin-bottom: 20px;
+}
+
+#uploadProductModal .modal-content form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#uploadProductModal .modal-content form label {
+    color: #c8ed72;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 0px;
+}
+
+#uploadProductModal .modal-content form input[type="text"],
+#uploadProductModal .modal-content form input[type="number"],
+#uploadProductModal .modal-content form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 0px;
+    border: 1px solid #c8ed72;
+    background-color: #2a2a2a;
+    color: #c8ed72;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 1em;
+}
+
+#uploadProductModal .modal-content form textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+#uploadProductModal .custom-file-upload {
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 0px;
+}
+
+#uploadProductModal input[type="file"] {
+    display: none;
+}
